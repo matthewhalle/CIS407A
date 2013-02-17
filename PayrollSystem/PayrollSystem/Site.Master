@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PayrollSystem.SiteMaster" %>
+﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PayrollSystem.SiteMaster" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -14,13 +14,13 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    CIS 407A ASP.NET Lab
+                   CIS 407A ASP.NET Lab
                 </h1>
             </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                        [ <a href="~/login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                         Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
@@ -38,7 +38,11 @@
                         <asp:MenuItem NavigateUrl="~/Week2.aspx" Text="Week2"/>
                         <asp:MenuItem NavigateUrl="~/Week3.aspx" Text="Week3"/>
                         <asp:MenuItem NavigateUrl="~/Week4.aspx" Text="Week4"/>
-                        <asp:MenuItem NavigateUrl="~/test.aspx" Text="test"/>                        
+                        <asp:MenuItem NavigateUrl="~/Week5.aspx" Text="Week5"/>
+                        <asp:MenuItem NavigateUrl="~/test.aspx" Text="test"/>  
+                        <asp:MenuItem NavigateUrl="~/securedpage.aspx" Text="Secured Page"/>     
+                        <asp:MenuItem NavigateUrl="~/Calculator.aspx" Text="Calculator"/> 
+                        <asp:MenuItem NavigateUrl="~/AddUser.aspx" Text="Add Users"/>         
                     </Items>
                 </asp:Menu>
             </div>

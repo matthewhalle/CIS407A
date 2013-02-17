@@ -11,6 +11,7 @@ namespace PayrollSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             //make the output text box not visable 
             //pnlOutput.Visible = false;
             if (Request.Params["debug"] != "true")

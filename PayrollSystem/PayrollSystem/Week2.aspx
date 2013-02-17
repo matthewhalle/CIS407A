@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Week2.aspx.cs" Inherits="PayrollSystem.Week2" %>
+<%@ Register TagPrefix="uc1" Namespace="PayrollSystem" Assembly="PayrollSystem" %>
+<%@ Register src="login.ascx" tagname="login" tagprefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <style type="text/css">
+     <style type="text/css">
         .style1
         {
             text-align: center;
@@ -8,7 +10,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    
+       
     <div class="style1">
         <strong>
         <font color="blue" face="Comic Sans MS" size="4">Cool</font><font 
@@ -45,7 +47,13 @@
                 runat="server" Width="400px" Height="80px" TextMode="MultiLine"></asp:TextBox>
             <br />
             <asp:Button ID="btnRedo" runat="server" Text="Redo" onclick="btnRedo_Click" />
+            <br />
+            
         </asp:Panel>
     </div>
+
+ 
+
+  
     
 </asp:Content>

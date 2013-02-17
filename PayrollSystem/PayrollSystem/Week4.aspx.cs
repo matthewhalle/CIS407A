@@ -56,21 +56,9 @@ namespace PayrollSystem
                 SQL += " and trackwhen like @trackwhen ";
                 comm.Parameters.AddWithValue("@trackwhen", "%" + txtWhen.Text + "%");
             }
-            //if (drpResults.SelectedValue != null)
-            //{
-            //    //SQL += "TOP ' " + drpResults.SelectedValue + "'";
-            //    SQL += "select TOP 5 UserTrackerID, TrackKey, value, trackwhen from HalleTracker";
-            //    var searchResults = Convert.ToInt16(drpResults.SelectedValue);
-            //    comm.Parameters.AddWithValue("@top", searchResults);
-                
-            //}
-            //else
-            //{
-            //    SQL += "select TOP (100) UserTrackerID, TrackKey, value, trackwhen from HalleTracker"; 
-            //}
+           
 
             Response.Write(SQL);
-            //var da = new SqlDataAdapter();
             comm.CommandText = SQL;
 
            

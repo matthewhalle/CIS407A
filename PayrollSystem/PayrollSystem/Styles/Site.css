@@ -100,7 +100,7 @@ first child of the left and right table columns */
     position: relative;
     margin: 0px;
     padding: 0px;
-    background: #4b6c9e;
+    background: teal;
     width: 100%;
 }
 
@@ -149,7 +149,7 @@ first child of the left and right table columns */
 
 div.hideSkiplink
 {
-    background-color:#3a4f63;
+    background-color: aquamarine;
     width:100%;
 }
 
@@ -296,4 +296,10 @@ div.accountInfo
 {
     text-align: right;
     padding-right: 10px;
+}
+.divider {
+    margin: 5px;
+}
+.center {
+   
 }
