@@ -18,6 +18,7 @@
                 </h1>
             </div>
             <div class="loginDisplay">
+                <asp:Image ID="Image1" runat="server" />
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
                         [ <a href="~/login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]

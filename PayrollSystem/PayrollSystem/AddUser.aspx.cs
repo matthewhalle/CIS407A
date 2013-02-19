@@ -12,7 +12,7 @@ namespace PayrollSystem
     {
        protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserLevel"] == null || Session["UserLevel"] != "Admin")
+            if (Session["UserLevel"] == null || Session["UserLevel"].ToString() != "Admin")
             {
                 Response.Redirect("default.aspx");
                 Response.End();
@@ -44,7 +44,7 @@ namespace PayrollSystem
             }
             else
             {
-                sql = "insert into halle_logon (userid, password, firstname, lastname, email, userlevel) values (@userid, @password, @firstname, @lastname, @email, @userlevel)";
+                sql = "insert into halle_logon (userid, password, firstname, lastname, email, userlevel, photo) values (@userid, @password, @firstname, @lastname, @email, @userlevel, @photo)";
                 comm.CommandText = sql;
                 comm.Parameters.Clear();
                 comm.Parameters.AddWithValue("@userid", txtUserName.Text);
@@ -53,6 +53,7 @@ namespace PayrollSystem
                 comm.Parameters.AddWithValue("@lastname", txtLastName.Text);
                 comm.Parameters.AddWithValue("@email", txtEmail.Text);
                 comm.Parameters.AddWithValue("@userlevel", txtLevel.Text);
+                comm.Parameters.AddWithValue("@photo", photoUpload);
 
                 comm.ExecuteNonQuery();
                 lblError.Text = "User Added!";
